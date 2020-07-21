@@ -1,0 +1,48 @@
+[
+    {
+       "model":"cart.category",
+       "pk":1,
+       "fields":{
+          "name":"shirt"
+       }
+    },
+    {
+       "model":"cart.colourvariation",
+       "pk":1,
+       "fields":{
+          "name":"green"
+       }
+    },
+    {
+       "model":"cart.sizevariation",
+       "pk":1,
+       "fields":{
+          "name":"s"
+       }
+    },
+    {
+       "model":"cart.product",
+       "pk":1,
+       "fields":{
+          "title":"nice shirt",
+          "slug":"nshirt",
+          "image":"product_images/plain_sports_tshirt_online_pea_green__05814.14564643082.jpg",
+          "description":"so nice",
+          "price":100,
+          "created":"2020-07-21T01:03:12.721Z",
+          "updated":"2020-07-21T01:03:12.721Z",
+          "active":true,
+          "primary_category":1,
+          "stock":2,
+          "available_colours":[
+             1
+          ],
+          "available_sizes":[
+             1
+          ],
+          "secondary_categories":[
+ 
+          ]
+       }
+    }
+ ]
