@@ -5,7 +5,7 @@ pip install -r requirements.txt
 python3 manage.py migrate
 
 ## generate fixtures:
-python manage.py loaddata fixtures.json
+python manage.py loaddata fixture.json
 
 ## unit tests
 python manage.py test
