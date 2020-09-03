@@ -1,0 +1,17 @@
+functional_tests:
+  # we start from official selenium docker image to simplify selenium setup
+  image: selenium/standalone-chrome:3.141.59
+  script:
+    # add python3 to run django
+    - sudo apt update ; sudo apt install -y python3-pip
+    - pip3 install -r requirements.txt
+    # setup django database with example items
+    - python3 manage.py migrate
+    - python3 manage.py loaddata fixture.json
+    # start django site on port 8000
+    - python3 manage.py runserver --noreload > /dev/null &
+    - sleep 3
+    # start selenium
+    - JAVA_OPTS="-Dwebdriver.chrome.whitelistedIps=" START_XVFB=false /opt/bin/entry_point.sh &
+    # start functional tests
+    - sleep 3; python3 -m pytest e2e.py
