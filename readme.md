@@ -1,18 +1,19 @@
-## build app :
+## Build app :
 pip install -r requirements.txt
 
 ## Create database
 python3 manage.py migrate
 
-## generate fixtures:
+## Generate fixtures:
 python manage.py loaddata fixture.json
 
-## unit tests
+## Unit tests
 python manage.py test
 
-## run app:
+## Functional tests (end to end tests)
+e2e.py is an example functional test that can be launched in gitlab-ci with the functional_tests stage in .gitlab-ci.yml
+
+## Run app:
 python manage.py runserver 0.0.0.0:8000
 
-
-e2e.py is an example functional test that can be launched in gitlab-ci with the functional_tests stage in .gitlab-ci.yml
 
