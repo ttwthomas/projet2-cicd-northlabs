@@ -7,7 +7,7 @@ functional_tests:
     - pip3 install -r requirements.txt
     # setup django database with example items
     - python3 manage.py migrate
-    - python3 manage.py loaddata fixture.json
+    - python3 manage.py loaddata fixtures.json
     # start django site on port 8000
     - python3 manage.py runserver --noreload > /dev/null &
     - sleep 3
